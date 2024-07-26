@@ -1,1 +1,3 @@
 # Apple-E-commerce-Store
+-------------------------------------------------------
+For my semester project on the applications of information communication technology, I successfully built a dynamic and visually appealing Apple e-commerce store using HTML, CSS, and JavaScript. This project allowed me to showcase my skills in front-end web development, emphasizing responsive design and user experience. Through this endeavor, I enhanced my proficiency in web technologies, demonstrating my ability to create functional and attractive online retail environments. This experience not only strengthened my technical capabilities but also reinforced my passion for developing innovative solutions in the digital landscape.
