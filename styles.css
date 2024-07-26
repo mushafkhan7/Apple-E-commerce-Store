@@ -1,0 +1,361 @@
+body {
+    background-color: #757575;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333030;
+    padding: 10px 20px;
+    color: white;
+    
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    transition: transform 0.5s ease-in-out, filter 0.3s ease-in-out; /* Added filter transition */
+}
+
+.logo img:hover {
+    animation: rotateLogo 1s linear, bounceLogo 0.5s ease-in-out infinite;
+    transform: scale(1.1); /* Increased size on hover */
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 1)); /* Added glow effect on hover */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    background-color: #333;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #555;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 10px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 80px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input[type="text"] {
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    flex: 1;
+}
+
+.search-box button {
+    padding: 8px 16px;
+    background-color: #555;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-radius: 20px;
+}
+
+.search-box button:hover {
+    background-color: #777;
+}
+
+.moving-headlines {
+    background-color: #333030;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 20px;
+    overflow: hidden; /* Hide overflow to prevent overlapping */
+}
+
+.headline-container {
+    display: inline-block; /* Ensure headlines are in a single line */
+    white-space: nowrap; /* Prevent headlines from wrapping */
+    animation: slide 30s linear infinite; /* Adjusted duration for smooth sliding */
+}
+
+.headline {
+    margin: 0;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.slider {
+    position: relative;
+    max-width: 70%;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1); /* Initial box shadow */
+
+    transition: box-shadow 0.3s ease-in-out; /* Added transition for box shadow */
+}
+
+.slider:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Increased box shadow on hover */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+    border: none;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.product {
+    position: relative;
+    margin: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-width: 300px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #f44336; /* Red color for price */
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+}
+.product img:hover {
+    transform: scale(1.05); /* Increase size on hover */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.247); /* Add glow effect on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.social-icons {
+    display: flex; /* Display icons in a row */
+    align-items: center; /* Center items vertically */
+    margin-left: 10px; /* Adjust spacing between text and icons */
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-left: 40px; /* Adjust spacing between icons */
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:first-child {
+    margin-left: 0; /* Remove margin from the first icon */
+}
+
+.social-icons a img {
+    width: 30px; /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
+    filter: invert(1); /* Invert the color to white */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    margin-right: 10px; /* Adjust spacing between text and icons */
+}
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounceLogo {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

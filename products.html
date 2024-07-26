@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Common styles -->
+    <link rel="stylesheet" href="products.css"> <!-- Specific styles for Products page -->
+</head>
+<body>
+    <!-- Manually include the common header -->
+    <header>
+        <div class="logo">
+            <img src="apple-logo.png" alt="Logo"> <!-- Add your logo image here -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="products.html" class="dropbtn">Products</a>
+                    <div class="dropdown-content">
+                        <a href="iphones.html">iPhones</a>
+                        <a href="ipads.html">iPads</a>
+                        <a href="macbooks.html">MacBooks</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="our-mission.html">Our Mission</a>
+                        <a href="team.html">Our Team</a>
+                        <a href="careers.html">Careers</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Enter your text">
+            <button type="submit">Search</button>
+        </div>
+    
+    <include src="header.html"></include>
+</header>
+
+    <h1>Products</h1>
+
+    <div class="category-container">
+        <div class="category">
+            <a href="iphones.html">
+                <img src="product10.jpg" alt="iPhones">
+                <h2>iPhones</h2>
+                <p>Explore our range of iPhones.</p>
+            </a>
+        </div>
+
+        <div class="category">
+            <a href="ipads.html">
+                <img src="ipad5.jpg" alt="iPads">
+                <h2>iPads</h2>
+                <p>Discover our collection of iPads.</p>
+            </a>
+        </div>
+
+        <div class="category">
+            <a href="macbooks.html">
+                <img src="macbook2.jpg" alt="MacBooks">
+                <h2>MacBooks</h2>
+                <p>Check out our MacBooks.</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
